@@ -1,6 +1,7 @@
 # biconomy---Data-Engineer-technical-test
 
-# EXPLANATORY LOOM
+# EXPLANATORY LOOM :
+[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
 
 # Task description : 
 https://biconomy.notion.site/Senior-Data-Engineer-Take-Home-Assignment-32678961244b400d96b237e090367d5c
