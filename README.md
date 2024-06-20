@@ -1,7 +1,7 @@
 # biconomy---Data-Engineer-technical-test
 
 # EXPLANATORY LOOM :
-[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
+https://www.loom.com/share/bdb938770ac141a6b1e58c7802fd22b9
 
 # Task description : 
 https://biconomy.notion.site/Senior-Data-Engineer-Take-Home-Assignment-32678961244b400d96b237e090367d5c
@@ -20,7 +20,7 @@ UserOperationEvent
 - Dependencies : see requirements.txt
 
 # What I did:
-
+- DISCLAIMER : only retrieved 65MB of events spanning ~36h
 - web3py code to retrieve historical UserOperationEvents from given contract. Contract ABI : src/entry_point_abi.json
 - code uses random public RPC websocket
 - retrieve block_timestamp and from_address for each event using RPC calls 
@@ -32,7 +32,7 @@ UserOperationEvent
  - Speed could be improved with better RPC or own hosted node. 
  - Get more events data 
  - Use threading/multiprocessing to speed things up
- - Use indexers or subgraph to retrieve data faster (didn't really look into it)
+ - Use indexers/subgraph/other source to potentially retrieve events data faster (didn't really look into it)
 
 
 

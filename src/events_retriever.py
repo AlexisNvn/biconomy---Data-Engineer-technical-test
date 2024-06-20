@@ -34,8 +34,7 @@ uri = f'postgresql://{os.environ["DB_USERNAME"]}:{os.environ["DB_PASSWORD"]}@{os
 DB_ENGINE = sqlalchemy.create_engine(uri)
 
 # Polygon Web3 connector
-rpc_url = "wss://polygon.gateway.tenderly.co" # Random polygon RPC websocket support eth_newFilter
-rpc_url = 'wss://polygon.drpc.org'
+rpc_url = 'wss://polygon.drpc.org' # Random polygon RPC websocket support eth_newFilter
 web3_connector = Web3(Web3.LegacyWebSocketProvider(rpc_url))
 
 # POA middleware
@@ -58,6 +57,9 @@ def fetch_and_store_events(start_block, end_block):
 
     # Retrieve events 
     events = event_filter.get_all_entries()
+
+    if not len(events):
+        return
 
     # Format events
     def format_event(event):
@@ -91,7 +93,7 @@ def fetch_and_store_events(start_block, end_block):
     )
 
 # Iterate over batch of blocks, not to overload RPC
-START_BLOCK = 58300000
+START_BLOCK = 58250000
 END_BLOCK = int(DB_ENGINE.execute(f"SELECT min(block_number) FROM {TABLE_NAME}").scalar())
 BATCH_SIZE = 100
 
